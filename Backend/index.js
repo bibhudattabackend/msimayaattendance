@@ -22,10 +22,11 @@ const cors = require("cors");
 dbConnect();
 app.use(morgan("dev"));
 const corsOptions = {
-  origin: 'https://romaadmin.expsolutions.net', // Allow your frontend's URL
+  origin: ['https://romaadmin.expsolutions.net', 'https://roma.expsolutions.net'], // Array of allowed origins
   methods: 'GET,POST,PUT,DELETE', // Allow specific HTTP methods
   allowedHeaders: 'Content-Type, Authorization', // Allow specific headers
 };
+
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
