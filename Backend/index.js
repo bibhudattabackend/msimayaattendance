@@ -23,7 +23,7 @@ dbConnect();
 app.use(morgan("dev"));
 const corsOptions = {
   origin: ['https://romaadmin.expsolutions.net', 'https://roma.expsolutions.net','http://localhost:3000'], // Array of allowed origins
-  methods: 'GET,POST,PUT,DELETE', // Allow specific HTTP methods
+  methods: 'GET,POST,PUT,DELETE,OPTIONS', // Allow specific HTTP methods
   allowedHeaders: 'Content-Type, Authorization', // Allow specific headers
 };
 
