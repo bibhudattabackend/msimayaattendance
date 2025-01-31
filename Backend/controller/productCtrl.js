@@ -20,9 +20,9 @@ const updateProduct = asyncHandler(async (req, res) => {
   const { id } = req.params;
   validateMongoDbId(id);
   try {
-    if (req.body.title) {
-      req.body.slug = slugify(req.body.title);
-    }
+    // if (req.body.title) {
+    //   req.body.slug = slugify(req.body.title);
+    // }
     const updateProduct = await Product.findByIdAndUpdate(id, req.body, {
       new: true,
     });
@@ -48,7 +48,7 @@ const getaProduct = asyncHandler(async (req, res) => {
   const { id } = req.params;
   validateMongoDbId(id);
   try {
-    const findProduct = await Product.findById(id).populate("color");
+    const findProduct = await Product.findById(id)
     res.json(findProduct);
   } catch (error) {
     throw new Error(error);

@@ -30,7 +30,7 @@ const seedUsers = async () => {
         password: "Admin123!", // Plain-text password
         role: "admin",
       });
-
+      console.log(vfjjgj) 
       // Create regular user
       const user = new User({
         firstname: "Regular",
