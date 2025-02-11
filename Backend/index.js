@@ -22,7 +22,7 @@ const cors = require("cors");
 dbConnect();
 app.use(morgan("dev"));
 const corsOptions = {
-  origin: ['https://romaadmin.expsolutions.net', 'https://roma.expsolutions.net','http://localhost:3000','http://gpsvts.expsolutions.net','https://gpsindiatracks.com','https://admin.gpsindiatracks.com'],
+  origin: ['https://romaadmin.expsolutions.net', 'https://roma.expsolutions.net','http://localhost:3001','http://localhost:3000','http://gpsvts.expsolutions.net','https://gpsindiatracks.com','https://admin.gpsindiatracks.com'],
   methods: 'GET,POST,PUT,DELETE,OPTIONS', // Allow specific HTTP methods
   allowedHeaders: 'Content-Type, Authorization', // Allow specific headers
 };
